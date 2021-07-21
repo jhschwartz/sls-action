@@ -1,4 +1,4 @@
-FROM node:14
+FROM nikolaik/python-nodejs:python3.8-nodejs14
 
 LABEL owner="Lukas Novotny <lucass.novotny@gmail.com>" \
       description="Runs serverless commands"
