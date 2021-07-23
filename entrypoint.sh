@@ -5,5 +5,6 @@
 echo ">>> Running sls $*"
 /app/node_modules/.bin/sls $@ | tee deploy.log
 egrep "ANY -.*/$" deploy.log | awk '{gsub("  ANY - ", "");print}' > .api_url
+cp .api_url api/ # in case we are working in subdir
 echo "saved api url to file .api_url"
 echo ">>> Completed"
